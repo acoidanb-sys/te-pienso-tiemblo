@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>te pienso tiemblo</title>
+
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#000000;
+  --pad:clamp(18px,4vw,58px);
+  --max:1500px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Helvetica,"Helvetica Neue",Arial,sans-serif;
+  font-size:12px;
+  line-height:1.28;
+  text-transform:lowercase;
+  -webkit-font-smoothing:antialiased;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color:#000000;
+  text-decoration:none;
+}
+
+a:hover{
+  opacity:.5;
+}
+
+img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* cabecera */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:22px var(--pad) 70px;
+}
+
+.logo{
+  font-size:12px;
+}
+
+.nav{
+  display:flex;
+  gap:18px;
+  font-size:11px;
+}
+
+/* portada */
+.hero{
+  min-height:42vh;
+  padding:0 var(--pad) 80px;
+  display:flex;
+  align-items:flex-start;
+}
+
+.hero-inner{
+  max-width:420px;
+}
+
+.hero h1{
+  margin:0 0 8px;
+  font-size:12px;
+  font-weight:400;
+}
+
+.hero p{
+  margin:0 0 6px;
+}
+
+/* archivo */
+.archive{
+  width:min(100%,var(--max));
+  margin:0 auto;
+  padding:0 var(--pad) 120px;
+}
+
+.month-title{
+  margin:0 0 90px;
+  font-size:11px;
+  font-weight:400;
+}
+
+.entry{
+  margin-bottom:clamp(120px,17vw,270px);
+}
+
+.date{
+  margin:0 0 10px;
+  font-size:11px;
+}
+
+.caption{
+  margin:0 0 28px;
+  max-width:500px;
+  font-size:12px;
+}
+
+/* composiciones */
+.photo{
+  margin:0;
+}
+
+.wide{
+  width:min(100%,1050px);
+}
+
+.medium{
+  width:min(82%,760px);
+}
+
+.small{
+  width:min(48%,500px);
+}
+
+.right{
+  margin-left:auto;
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.stack{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* texto libre */
+.note{
+  max-width:620px;
+  margin-top:30px;
+}
+
+.note p{
+  margin:0 0 10px;
+}
+
+/* pie */
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:60px var(--pad) 26px;
+  font-size:10px;
+}
+
+/* móvil */
+@media(max-width:700px){
+  .hero{
+    min-height:30vh;
+  }
+
+  .grid2,
+  .grid3{
+    grid-template-columns:1fr;
+  }
+
+  .small,
+  .medium,
+  .wide{
+    width:100%;
+  }
+
+  .entry{
+    margin-bottom:115px;
+  }
+
+  .footer{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <a class="logo" href="#top">te pienso tiemblo</a>
+
+  <nav class="nav">
+    <a href="#archive">blog</a>
+    <a href="#about">+</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>te pienso tiemblo</h1>
+      <p>archivo visual.</p>
+    </div>
+  </section>
+
+  <section id="archive" class="archive">
+
+    <h2 class="month-title">08 2026</h2>
+
+
+    <!-- =========================
+         DÍA 16 — UNA FOTO GRANDE
+    ========================== -->
+    <article class="entry">
+      <p class="date">08 16</p>
+      <p class="caption">domingo</p>
+
+      <div class="wide">
+        <img src="16-01.jpg" alt="">
+      </div>
+    </article>
+
+
+    <!-- =========================
+         DÍA 15 — DOS FOTOS JUNTAS
+    ========================== -->
+    <article class="entry">
+      <p class="date">08 15</p>
+      <p class="caption">green obsession</p>
+
+      <div class="grid2">
+        <img src="15-01.jpg" alt="">
+        <img src="15-02.jpg" alt="">
+      </div>
+    </article>
+
+
+    <!-- =========================
+         DÍA 14 — FOTO PEQUEÑA A LA DERECHA
+    ========================== -->
+    <article class="entry">
+      <p class="date">08 14</p>
+      <p class="caption">walking home after the light disappeared</p>
+
+      <div class="small right">
+        <img src="14-01.jpg" alt="">
+      </div>
+    </article>
+
+
+    <!-- =========================
+         DÍA 12 — DOS FOTOS VERTICALES
+    ========================== -->
+    <article class="entry">
+      <p class="date">08 12</p>
+      <p class="caption">details from the day</p>
+
+      <div class="medium stack">
+        <img src="12-01.jpg" alt="">
+        <img src="12-02.jpg" alt="">
+      </div>
+
+      <div class="note">
+        <p>puedes escribir aquí una nota más larga.</p>
+        <p>este texto aparece debajo de las imágenes.</p>
+      </div>
+    </article>
+
+
+    <!-- =========================
+         DÍA 10 — TRES FOTOS
+    ========================== -->
+    <article class="entry">
+      <p class="date">08 10</p>
+      <p class="caption">things i wanted to remember</p>
+
+      <div class="grid3">
+        <img src="10-01.jpg" alt="">
+        <img src="10-02.jpg" alt="">
+        <img src="10-03.jpg" alt="">
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<footer id="about" class="footer">
+  <span>te pienso tiemblo</span>
+  <span>visual archive</span>
+</footer>
+
+</body>
+</html>
